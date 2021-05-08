@@ -66,7 +66,7 @@ public class User implements Model{
 		this.password = password;
 	}
 
-	public boolean isVerified() {
+	public boolean getisVerified() {
 		return isVerified;
 	}
 

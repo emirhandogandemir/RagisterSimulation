@@ -13,7 +13,7 @@ public class InMemoryUserDao implements UserDao {
 	public static List<User> users =new ArrayList<User>();
 
 	public InMemoryUserDao() {
-		users = new ArrayList<User>();
+		
 	}
 	
 	

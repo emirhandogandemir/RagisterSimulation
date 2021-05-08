@@ -8,15 +8,19 @@ import registerSimulation.core.utilities.results.Result;
 import registerSimulation.core.utilities.results.SuccessResult;
 
 public class ValidationRules {
-	 public static Result [] run(Result... results) {
-		 List<Result> resultList = new ArrayList<Result>();
+	// kontrol edilen metotlarýn duru
+	 public static List<Result> resultList = new ArrayList<Result>();
+	 public static Result[] run(Result... results) {
+		
 		 for(Result result : results) {
     		 if(!result.isSuccess()) {
     			 resultList.add(result);
+    			
     		 }
-    			 //return new ErrorResult();
+    			
     			
     	 }
 		 return resultList.toArray(new Result[resultList.size()]);
+		
      }
 }

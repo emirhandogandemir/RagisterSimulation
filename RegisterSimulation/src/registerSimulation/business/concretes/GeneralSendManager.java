@@ -32,12 +32,13 @@ public class GeneralSendManager implements GeneralSendService{
 	public void send(User user)  {
 		
 		boolean result=validationService.validate(user);
-		//System.out.println(result);
+		System.out.println(result);
 		//System.out.println("aýdjkpaoedý");
-		if(result==false ){
+		if(result==true ){
 			authorizationService.register(user);
 			loggerService.add(user);
 			mailService.send(user);
+			user.setVerified(true);
 			
 		}
 		

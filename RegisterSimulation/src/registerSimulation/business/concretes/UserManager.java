@@ -6,6 +6,7 @@ import java.util.regex.Pattern;
 
 import registerSimulation.business.abstracts.GeneralSendService;
 import registerSimulation.business.abstracts.UserService;
+import registerSimulation.business.abstracts.ValidationService;
 import registerSimulation.business.constants.ValidationMessage;
 import registerSimulation.core.crossCuttingConcerns.Authorization.AuthorizationService;
 import registerSimulation.core.crossCuttingConcerns.log.LoggerService;
@@ -18,12 +19,14 @@ import registerSimulation.model.concretes.User;
 public class UserManager implements UserService{
 
 	private UserDao userDao;
+	
 	private GeneralSendService generalSendService;
 	
 	public UserManager(UserDao userDao,GeneralSendService generalSendService) {
 		super();
 		this.userDao = userDao;
 		this.generalSendService=generalSendService;
+		
 	}
 
 	@Override
@@ -67,12 +70,15 @@ public class UserManager implements UserService{
 		return userDao.getEmails();
 	}
 
+	
+	// burda olmamasý gerek
 	@Override
 	public boolean isMailMatched(User user) {
 		
 		return userDao.isMailMatched(user);
 	}
 
+	//burda olmamasý gerek
 	@Override
 	public boolean isPassWordMatched(User user) {
 		

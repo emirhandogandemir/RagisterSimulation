@@ -29,12 +29,10 @@ public class Main {
 		MailService mailService = new UserMailManager();
 		GeneralSendService generalSendService = new GeneralSendManager(authorization, loggerService, mailService,
 				validationService);
-		
-		UserService userService = new UserManager(userDao,generalSendService);
+
+		UserService userService = new UserManager(userDao, generalSendService);
 		userService.add(user);
-//userService.add(user);
-		
-		
+		System.out.println("adlý kullanýcý aktiflik durumu : " + user.getisVerified());
 
 	}
 

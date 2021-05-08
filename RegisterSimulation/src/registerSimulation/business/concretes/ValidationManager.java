@@ -26,11 +26,11 @@ public class ValidationManager implements ValidationService {
 				this.userLastNameCheck(user),this.isPassWordMatched(user),this.userPasswordCheck(user),this.isMailMatched(user));
 		for (Result result : results) {
 			if (!result.isSuccess()) {
-				result.getMessage();
-				return false;
+			return true;
+				
 			}
 		}
-		return true;
+		return false;
 	}
 
 	private Result userFirstNameCheck(User user) {
@@ -96,13 +96,13 @@ public class ValidationManager implements ValidationService {
 		return new SuccessResult();
 	}
 
-	private Result isPassWordMatched(User user) {
-		if (!InMemoryUserDao.users.stream().anyMatch(mails -> mails.geteMail() == user.geteMail())) {
+	public Result isPassWordMatched(User user) {
+		if (!InMemoryUserDao.users.stream().anyMatch(mails -> mails.getPassword() == user.getPassword())) {
 			return new ErrorResult();
 		}
 		return new SuccessResult();
 	}
-	private Result isMailMatched(User user) {
+	public Result isMailMatched(User user) {
 		if(!InMemoryUserDao.users.stream().anyMatch(mails->mails.geteMail() ==user.geteMail())) {
 			return new ErrorResult();
 		}
