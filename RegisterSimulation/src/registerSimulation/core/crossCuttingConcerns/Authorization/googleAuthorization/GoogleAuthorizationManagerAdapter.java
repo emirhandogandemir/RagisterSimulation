@@ -17,7 +17,7 @@ public class GoogleAuthorizationManagerAdapter implements AuthorizationService{
 	@Override
 	public void login(User user) {
 		this.googleAuthorization.login(user.geteMail(), user.getPassword());
-		
+		  
 	}
 
 	
