@@ -28,7 +28,7 @@ public class Main {
 		AuthorizationService authorization = new GoogleAuthorizationManagerAdapter(new GoogleAuthorizationManager());
 		MailService mailService = new UserMailManager();
 		GeneralSendService generalSendService = new GeneralSendManager(authorization, loggerService, mailService,
-				validationService);
+				validationService); 
 
 		UserService userService = new UserManager(userDao, generalSendService);
 		userService.add(user);
