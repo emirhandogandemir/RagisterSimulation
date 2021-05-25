@@ -6,7 +6,7 @@
 * `E-Posta daha önce kullanılmamış olmalıdır.`
 * `Ad ve soyad en az iki karakterden oluşmalıdır.`
 * `Üyelik sonucu kullanıcıya doğrulama e-postası gönderilmelidir. (Simulasyon)`
-* `Doğrulama linki tıklandığında üyelik tamamlanmalıdır. (Simulasyon)`
+* `Doğrulama linki tıklandığında üyelik tamamlanmalıdır. (Simulasyon)`    
 * `Hatalı veya başarılı durumda kullanıcı bilgilendirilmelidir.`
 * `Kullanıcılar sisteme Google hesapları ile üye olabilmelidir. (Simulasyon)`
 
